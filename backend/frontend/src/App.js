@@ -4,9 +4,10 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import CatsList from './CatsList'
 
 import './App.css';
+import SiteHeader from './CatHeader';
+import CatsList from './CatsList'
 
 
 
@@ -15,7 +16,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<CatsList />} />
+          <Route path="/" element={<><SiteHeader />  <CatsList /></>} />
         </Routes>
       </BrowserRouter>
     );

@@ -32,6 +32,23 @@
   padding-top: 2rem;
 }
 
+.search-block {
+  background-color: #bebebe;
+  padding: 2rem 3rem 2rem 3rem;
+}
+
+.search-block input {
+  text-align: center;
+  border: 3px solid #5B021D;
+  font-size: x-large;
+}
+
+.cats-number {
+  color: #3d2b1f;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 
 .img-container {
   margin: 1rem;
