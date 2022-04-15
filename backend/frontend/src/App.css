@@ -2,7 +2,6 @@
 
 
 .top-block {
-  /* background-color: #310062; */
   background-image: url(https://wallpaperaccess.com/full/6168245.jpg);
   padding: 10rem 0 3rem 0;
 }
@@ -50,6 +49,11 @@
 
 .search-block input::placeholder {
   color: lightblue;
+}
+
+#hidden-info {
+  font-size: large;
+  color: red;
 }
 
 .cats-number {

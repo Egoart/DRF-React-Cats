@@ -14,6 +14,7 @@ class CatsList extends Component {
         this.state = {
             cats: [],
             searchField: "",
+            infoVisibile: "hidden"
         };
     }
 
@@ -22,6 +23,18 @@ class CatsList extends Component {
         this.setState({ searchField: lowerValue });
 
     };
+
+    handleMOuseOver = (e) => {
+        this.setState({
+            infoVisibile: "visible"
+        })
+    }
+
+    handleMOuseOut = (e) => {
+        this.setState({
+            infoVisibile: "hidden"
+        })
+    }
 
 
     componentDidMount() {
@@ -65,8 +78,11 @@ class CatsList extends Component {
             <div>
                 <div className="search-block">
                     <form className="">
-                        <div className="col-md-12">
-                            <input type="search" className="form-control" onChange={this.handleChange} id="cat-search-form" placeholder="Find a cat (type cyrillic name)" />
+                        <div className="col-md-12" >
+                            <div role="input-info" className="container-info" onMouseOver={this.handleMOuseOver} onMouseOut={this.handleMOuseOut}>
+                                <div id="hidden-info" style={{ visibility: this.state.infoVisibile }}>Type breed of cat in cyrillic in the form below</div>
+                                <input type="search" className="form-control" onChange={this.handleChange} id="cat-search-form" placeholder="Find a cat" />
+                            </div>
                         </div>
                     </form>
                 </div>
