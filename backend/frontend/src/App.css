@@ -39,8 +39,17 @@
 
 .search-block input {
   text-align: center;
-  border: 3px solid #5B021D;
   font-size: x-large;
+
+}
+
+.search-block input[type="search"] {
+  background-color: #2D3E50;
+  color: azure;
+}
+
+.search-block input::placeholder {
+  color: lightblue;
 }
 
 .cats-number {

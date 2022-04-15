@@ -66,7 +66,7 @@ class CatsList extends Component {
                 <div className="search-block">
                     <form className="">
                         <div className="col-md-12">
-                            <input type="search" className="form-control" onChange={this.handleChange} id="cat-search-form" placeholder="Find a cat (cyrillic name)" />
+                            <input type="search" className="form-control" onChange={this.handleChange} id="cat-search-form" placeholder="Find a cat (type cyrillic name)" />
                         </div>
                     </form>
                 </div>
@@ -76,7 +76,7 @@ class CatsList extends Component {
                         <div className="d-flex flex-wrap justify-content-around">
                             {console.log(this.getFiltered())}
                             {this.getFiltered().map(cat =>
-                                <div key={cat.pk} className="img-container" style={{ width: '20rem' }}>
+                                <div key={cat.id} className="img-container" style={{ width: '20rem' }}>
                                     <a href={cat.description} target="_blank" rel="noopener noreferrer">
                                         <img referrerPolicy="no-referrer" src={cat.cat_image} className="img-top" alt={cat.breed} />
                                     </a>
